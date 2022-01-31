@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import vyper
 
 with open('tests/CanalLock.vy', 'r') as f:
@@ -8,6 +9,7 @@ with open('tests/CanalLock.vy', 'r') as f:
             'assert not self.gate2_down  # CHANGE ME',
             'assert self.gate2_down  # CHANGED!',
         )
+    # ! forge expects 'bin' and 'bin_runtime'. Worth checking for those as well?
     bad_interface = vyper.compile_code(code,
             output_formats=['abi', 'bytecode', 'bytecode_runtime'])
 

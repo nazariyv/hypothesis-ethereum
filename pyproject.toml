@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hypothesis-ethereum"
+version = "0.1.0"
+description = ""
+authors = ["0x1ff", "fubuloubu"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.10"
+hypothesis = "4.23.5"
+eth-abi = "2.0.0b9"
+web3 = "5.0.0"
+vyper = "0.1.0b17"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
