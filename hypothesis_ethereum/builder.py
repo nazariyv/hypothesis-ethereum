@@ -16,14 +16,13 @@ from eth_abi.tools import get_abi_strategy
 # # todo: this is not useful. This is just a custom error
 # from eth_tester.exceptions import TransactionFailed
 
-class TransactionFailed(Exception):
-    pass
-
 from web3 import (
     Web3,
     EthereumTesterProvider,
 )
 
+class TransactionFailed(Exception):
+    pass
 
 def _validate_interface(interface):
     interface_members = interface.keys()
